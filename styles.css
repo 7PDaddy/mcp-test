@@ -1,0 +1,122 @@
+/* Mystic Park Pickleball Tournament styles */
+
+:root {
+  --bg: #0f1115;
+  --bg-card: #171a21;
+  --text: #f4f6fb;
+  --text-dim: #b7bdca;
+  --accent: #c6ff4a;
+  --border: #262b35;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Instrument Sans", system-ui, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 72px 24px 96px;
+}
+
+/* Hero */
+.hero {
+  margin-bottom: 56px;
+}
+
+.eyebrow {
+  font-family: "IBM Plex Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.8rem;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.4rem, 8vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+
+.lede {
+  font-size: 1.2rem;
+  color: var(--text-dim);
+  max-width: 46ch;
+}
+
+/* Details */
+.details {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 56px;
+}
+
+.detail {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.label {
+  font-family: "IBM Plex Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-bottom: 8px;
+}
+
+.value {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1.35rem;
+  color: var(--text);
+}
+
+/* More section */
+.more {
+  border-top: 1px solid var(--border);
+  padding-top: 40px;
+  margin-bottom: 56px;
+}
+
+h2 {
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+}
+
+.more p {
+  color: var(--text-dim);
+  max-width: 52ch;
+}
+
+/* Footer */
+.foot {
+  color: var(--text-dim);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.9rem;
+}
+
+/* Wider screens get the three details side by side */
+@media (min-width: 620px) {
+  .details {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
