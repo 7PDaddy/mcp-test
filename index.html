@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Facials and Brows in North Phoenix</title>
+  <meta name="description" content="Facials, brow lamination, and brow tinting in the North Phoenix area. Now welcoming new clients.">
+  <style>
+    :root {
+      --cream: #fbf4ef;
+      --blush: #e8b4b8;
+      --rose: #c26b6f;
+      --sage: #9caf88;
+      --plum: #3d2b32;
+      --soft: #f3e3dc;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--cream);
+      color: var(--plum);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, .brand {
+      font-family: Georgia, "Times New Roman", serif;
+      letter-spacing: -0.01em;
+    }
+
+    .wrap { max-width: 860px; margin: 0 auto; padding: 0 22px; }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 72px 22px 60px;
+      background: linear-gradient(160deg, var(--soft), var(--cream));
+    }
+    .brand {
+      font-size: 1.05rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 22px;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 8vw, 3.4rem);
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+    .hero p {
+      font-size: 1.15rem;
+      max-width: 40ch;
+      margin: 0 auto 30px;
+      color: #5c4750;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--rose);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 14px 30px;
+      border-radius: 999px;
+    }
+    .btn.alt { background: var(--sage); }
+
+    section { padding: 56px 0; }
+    .section-title {
+      text-align: center;
+      font-size: 1.7rem;
+      margin-bottom: 34px;
+    }
+
+    /* Services */
+    .services {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid var(--soft);
+      border-radius: 18px;
+      padding: 28px;
+    }
+    .card h3 {
+      font-family: Georgia, serif;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: var(--rose);
+    }
+    .card p { color: #5c4750; }
+
+    /* About + location bands */
+    .band { background: var(--soft); border-radius: 22px; padding: 40px 30px; }
+    .band h2 { font-size: 1.6rem; margin-bottom: 14px; }
+    .band p { max-width: 56ch; color: #5c4750; }
+    .band + .band { margin-top: 22px; }
+
+    /* Contact */
+    .contact { text-align: center; }
+    .contact p { max-width: 46ch; margin: 0 auto 26px; color: #5c4750; }
+    .note {
+      display: inline-block;
+      background: #fff;
+      border: 1px dashed var(--blush);
+      border-radius: 12px;
+      padding: 6px 14px;
+      font-size: 0.9rem;
+      color: var(--rose);
+      margin-top: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 22px 56px;
+      color: #8a7078;
+      font-size: 0.9rem;
+    }
+
+    @media (min-width: 700px) {
+      .services { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="brand">Your Studio Name</div>
+    <h1>Facials and brows in North Phoenix</h1>
+    <p>A new aesthetician welcoming clients who love feeling fresh and taken care of. Facials, brow lamination, and brow tinting.</p>
+    <a class="btn" href="#contact">Book a visit</a>
+  </header>
+
+  <main class="wrap">
+
+    <section>
+      <h2 class="section-title">Services</h2>
+      <div class="services">
+        <div class="card">
+          <h3>Facials</h3>
+          <p>A relaxing treatment to cleanse and refresh your skin, chosen to fit what your skin needs that day.</p>
+        </div>
+        <div class="card">
+          <h3>Brow Lamination</h3>
+          <p>Sets your brows into a fuller, brushed up shape that lasts for weeks, so they look neat with little effort.</p>
+        </div>
+        <div class="card">
+          <h3>Brow Tinting</h3>
+          <p>Adds soft color to your brows to make them look fuller and more defined, matched to your natural tone.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="band">
+        <h2>About</h2>
+        <p>I am a new aesthetician building my client list in the North Phoenix area. I take my time, keep things clean and calm, and want every visit to feel easy. If you love facials and well kept brows, I would love to have you in my chair.</p>
+      </div>
+      <div class="band">
+        <h2>Where I am</h2>
+        <p>Serving the North Phoenix area. Reach out and I will share the exact location and the times I have open.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2 class="section-title">Book a visit</h2>
+      <p>New clients are welcome. Send a message to set up your first appointment and ask any questions.</p>
+      <a class="btn alt" href="mailto:your-email@example.com">Email to book</a>
+      <div class="note">Replace with your real email or phone number</div>
+    </section>
+
+  </main>
+
+  <footer>
+    North Phoenix, Arizona
+  </footer>
+
+</body>
+</html>
