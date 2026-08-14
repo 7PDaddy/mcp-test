@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fitzology</title>
+  <meta name="description" content="Fitzology helps companies build new hosting businesses, from data center buildout to launch. 25+ years of experience.">
+  <style>
+    :root {
+      --bg: #08090d;
+      --card: #12141c;
+      --card2: #151824;
+      --line: #23283a;
+      --text: #eef1f8;
+      --dim: #9aa3b8;
+      --cyan: #35e0d6;
+      --blue: #5b8cff;
+      --violet: #a071ff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .mono { font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace; }
+
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 28px 20px 64px; }
+
+    .topbar {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 8px 4px 26px;
+    }
+    .logo {
+      font-weight: 800; font-size: 1.25rem; letter-spacing: -0.02em;
+      background: linear-gradient(90deg, var(--cyan), var(--blue), var(--violet));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .topbar .tag { color: var(--dim); font-size: 0.82rem; letter-spacing: 0.04em; }
+
+    /* Bento grid */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    .tile {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 26px;
+      position: relative;
+      overflow: hidden;
+    }
+    .tile h2 {
+      font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.14em;
+      color: var(--cyan); margin-bottom: 14px;
+    }
+    .tile p { color: var(--dim); }
+    .tile p strong { color: var(--text); font-weight: 600; }
+
+    /* Hero */
+    .hero {
+      background:
+        radial-gradient(700px 260px at 15% 0%, rgba(91,140,255,0.22), transparent 60%),
+        radial-gradient(600px 240px at 90% 30%, rgba(160,113,255,0.18), transparent 60%),
+        var(--card2);
+    }
+    .hero .eyebrow {
+      color: var(--dim); font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 6vw, 3.1rem); line-height: 1.08; letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .hero .lede { font-size: 1.12rem; color: var(--dim); max-width: 46ch; }
+
+    /* Stat */
+    .stat { background: linear-gradient(160deg, rgba(53,224,214,0.12), var(--card)); }
+    .stat .num {
+      font-size: clamp(2.6rem, 9vw, 3.6rem); font-weight: 800; letter-spacing: -0.03em;
+      background: linear-gradient(90deg, var(--cyan), var(--blue));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      line-height: 1;
+    }
+    .stat .num small { font-size: 1.4rem; }
+
+    .list { list-style: none; margin-top: 6px; }
+    .list li { color: var(--dim); padding: 7px 0; border-bottom: 1px solid var(--line); }
+    .list li:last-child { border-bottom: 0; }
+    .list li b { color: var(--text); font-weight: 600; }
+
+    /* CTA */
+    .cta { text-align: center; background: linear-gradient(160deg, rgba(160,113,255,0.16), var(--card)); }
+    .cta h2 { color: var(--violet); }
+    .btn {
+      display: inline-block; margin-top: 8px;
+      background: linear-gradient(90deg, var(--cyan), var(--blue));
+      color: #05070c; text-decoration: none; font-weight: 700;
+      padding: 13px 28px; border-radius: 999px;
+    }
+    .mini { display: block; margin-top: 14px; font-size: 0.8rem; color: #6f778c; }
+
+    footer { text-align: center; color: #5c6379; font-size: 0.85rem; padding-top: 34px; }
+
+    /* Bento spans on wider screens */
+    @media (min-width: 720px) {
+      .grid { grid-template-columns: repeat(4, 1fr); grid-auto-rows: minmax(120px, auto); }
+      .hero      { grid-column: span 3; grid-row: span 2; }
+      .stat      { grid-column: span 1; grid-row: span 2; display: flex; flex-direction: column; justify-content: center; }
+      .datacenter{ grid-column: span 2; }
+      .hosting   { grid-column: span 2; }
+      .services  { grid-column: span 2; grid-row: span 2; }
+      .approach  { grid-column: span 2; }
+      .cta       { grid-column: span 2; display: flex; flex-direction: column; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="topbar">
+      <div class="logo">Fitzology</div>
+      <div class="tag mono">hosting &middot; infrastructure &middot; strategy</div>
+    </div>
+
+    <div class="grid">
+
+      <section class="tile hero">
+        <div class="eyebrow">Consulting for the hosting industry</div>
+        <h1>Build a hosting business that actually scales.</h1>
+        <p class="lede">Fitzology helps companies stand up new hosting businesses, from the data center floor to a product customers pay for.</p>
+      </section>
+
+      <section class="tile stat">
+        <h2>Experience</h2>
+        <div class="num mono">25<small>+</small></div>
+        <p style="margin-top:12px;">years building data centers and hosting companies from the ground up.</p>
+      </section>
+
+      <section class="tile datacenter">
+        <h2>Data centers, ground up</h2>
+        <p>I have designed and stood up <strong>data centers from bare concrete to live racks</strong>: power, cooling, network, and the operations to keep them running.</p>
+      </section>
+
+      <section class="tile hosting">
+        <h2>Hosting from zero</h2>
+        <p>I have launched <strong>hosting businesses end to end</strong>, from the infrastructure underneath to the product, pricing, and support customers actually use.</p>
+      </section>
+
+      <section class="tile services">
+        <h2>What I help with</h2>
+        <ul class="list">
+          <li><b>Strategy</b> for launching or relaunching a hosting business</li>
+          <li><b>Data center</b> planning, buildout, and vendor selection</li>
+          <li><b>Infrastructure</b> and network design that can grow</li>
+          <li><b>Product and pricing</b> for real hosting offers</li>
+          <li><b>Operations</b> and the team habits that keep uptime high</li>
+        </ul>
+      </section>
+
+      <section class="tile approach">
+        <h2>How I work</h2>
+        <p>Plain and practical. I come in, learn your situation, and give you a clear path with real tradeoffs, not a slide deck full of buzzwords.</p>
+      </section>
+
+      <section class="tile cta">
+        <h2>Start a conversation</h2>
+        <p style="margin-bottom:18px;">Thinking about building a hosting business? Let's talk it through.</p>
+        <a class="btn" href="mailto:your-email@example.com">Get in touch</a>
+        <span class="mini">Send me your real email and I will connect this button to it</span>
+      </section>
+
+    </div>
+
+    <footer class="mono">Fitzology &middot; hosting and data center consulting</footer>
+
+  </div>
+</body>
+</html>
